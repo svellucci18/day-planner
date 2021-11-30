@@ -3,6 +3,10 @@ var containerEl = $('.container')
 // $('#currentDay')
 var currentHour
 
+// Add current Day to jumbotron
+var currentDay = moment();
+        $("#currentDay").text(currentDay.format("dddd, MMMM Do"));
+
 // Loop through from 9 - 17 (military time)
 for (var i=9; i<18; i++) {
     // Create a new block of HTML for each hour of the data
