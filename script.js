@@ -18,6 +18,18 @@ for (var i=9; i<18; i++) {
     // local storage key = "hour-9"
     var savedValueForHour = localStorage.getItem( "hour-" + i);
 
+    //color-blocking
+    var timeBlock = $("#hour-" + i)
+
+    if (i < moment().hour()) {
+        timeBlock.addClass("past")
+    }
+    if (i == moment().hour()) {
+        timeBlock.addClass("present")
+    }
+    if (i > moment().hour()) {
+        timeBlock.addClass("future")
+    }   
 }
 
 // create event listener on the container and responds just to the buttons in them in this case the save buttons.
