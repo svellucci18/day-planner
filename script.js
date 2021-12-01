@@ -33,9 +33,22 @@ for (var i=9; i<18; i++) {
 }
 
 // create event listener on the container and responds just to the buttons in them in this case the save buttons.
-containerEl.on('click','button', function(event) {
+var saveButtonEl = $("button");
+
+saveButtonEl.click(function(event) {
     // data-attributes are easier without jQuery, but might be easier to stay consistent in jQuery here.
     // $(event.target).data()
+    console.log(event);
+    console.log(event.target.parentElement.previousElementSibling.children[0].value)
+    
+    var hour = event.target.value;
+    var task = event.target.parentElement.previousElementSibling.children[0].value;
+    var taskTime = {
+        hour: hour,
+        task: task
+    }
+
+    localStorage.setItem(hour,JSON.stringify(taskTime))
 
 });
 
