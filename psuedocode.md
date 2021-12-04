@@ -10,5 +10,8 @@
     Do: localStorage.setItem ( 'hour-9', "hour 9 text value") this way you don't need to JSON.stringify
     Use textarea tag for the input boxes 
 
+-read local storage
+-print into textAreas
+
 
     
