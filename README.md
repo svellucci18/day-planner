@@ -27,3 +27,11 @@ THEN the text for that event is saved in local storage
 WHEN I refresh the page
 THEN the saved events persist
 ```
+
+## Screenshots
+![Welcome page!](dayplanner.png)
+
+
+
+## Link to game!
+[Link to live portfolio](https://svellucci18.github.io/day-planner/)
